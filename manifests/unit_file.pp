@@ -36,7 +36,7 @@ define systemd::unit_file(
 ) {
   include systemd
 
-  assert_type(Systemd::Unit, $name)
+  #assert_type(Systemd::Unit, $name)
 
   if $target {
     $_ensure = 'link'
