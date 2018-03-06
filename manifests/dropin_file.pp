@@ -31,10 +31,10 @@ define systemd::dropin_file(
   Systemd::Unit                     $unit,
   Systemd::Dropin                   $filename = $name,
   Enum['present', 'absent', 'file'] $ensure   = 'present',
-  Stdlib::String              $path     = '/etc/systemd/system',
+  String              $path     = '/etc/systemd/system',
   Optional[String]                  $content  = undef,
   Optional[String]                  $source   = undef,
-  Optional[Stdlib::String]    $target   = undef,
+  Optional[String]    $target   = undef,
 ) {
   include systemd
 

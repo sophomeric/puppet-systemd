@@ -2,10 +2,10 @@
 # Creates network config for systemd-networkd
 define systemd::network (
   Enum['file', 'absent'] $ensure         = file,
-  Stdlib::String $path             = '/etc/systemd/network',
+  String $path             = '/etc/systemd/network',
   Optional[String] $content              = undef,
   Optional[String] $source               = undef,
-  Optional[Stdlib::String] $target = undef,
+  Optional[String] $target = undef,
   Boolean $restart_service               = true,
 ){
 

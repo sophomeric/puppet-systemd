@@ -28,7 +28,7 @@
 #
 define systemd::service_limits(
   Enum['present', 'absent', 'file'] $ensure          = 'present',
-  Stdlib::String              $path            = '/etc/systemd/system',
+  String              $path            = '/etc/systemd/system',
   Optional[Systemd::ServiceLimits]  $limits          = undef,
   Optional[String]                  $source          = undef,
   Boolean                           $restart_service = true

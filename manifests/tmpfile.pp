@@ -27,7 +27,7 @@
 #
 define systemd::tmpfile(
   Enum['present', 'absent', 'file'] $ensure  = 'file',
-  Stdlib::String              $path    = '/etc/tmpfiles.d',
+  String              $path    = '/etc/tmpfiles.d',
   Optional[String]                  $content = undef,
   Optional[String]                  $source  = undef,
 ) {
